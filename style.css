@@ -60,7 +60,7 @@ html {
         flex-direction: column;
         justify-content: space-between;
     }
-
+/* MAIN */
     section, main {
         display: flex;
         flex-direction: column;
@@ -69,7 +69,7 @@ html {
     h2 {
         font-size: 38px;
     }
-    .blurb {
+    .blurb, .authentication {
         width: 320px;
         padding-top: 60px;
         padding-bottom: 100px;
@@ -85,6 +85,32 @@ html {
         width: 100%;
         height: 320px;
     }
+    #username, #password {
+        font-size: 26px;
+        width: 280px;
+    }
+    .authentication label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 16px 0 12px 0;
+    }
+    .auth-btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+    .credential-btn {
+        width: 200px;
+        font-size: 20px;
+        margin: 8px;
+        padding: 8px;
+        white-space: nowrap;
+    }
+    .requirement {
+        color: grey;
+    }
 /* PATTERNS */
     .patterns-area {
         display: grid;
@@ -92,6 +118,7 @@ html {
     .pattern {
         background-color: rgb(235, 235, 235);
         padding: 8px;
+        margin-top: 16px;
     }
     .pattern-edit, .pattern-main {
         display: flex;
@@ -102,10 +129,28 @@ html {
     .name-input {
         font-size: 22px;
         text-align: center;
+        background-color:rgb(235, 235, 235);
+        border: none;
     }
     .pattern button {
         width: 36px;
         height: 34px;
+        border: none;
+    }
+    .pattern button:hover, .name-input:hover {
+        border: solid grey 1px;
+        border-radius: 4px;
+    }
+    .expanded {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .expanded div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
     }
     .expanded button {
         width: 22px;
@@ -115,7 +160,8 @@ html {
         background-color: lightgray;
         border: solid darkgray 1px;
         display: flex;
-        width: 440px;
+        flex-grow: 1;
+        margin: 0 6px;
         border-radius: 4px;
     }
     .beat {

@@ -18,12 +18,22 @@
     </header>
     <main>
         <section>
-            <div class="blurb">
-                <h2>FIND YOUR GROOVE</h2>
-                <p>Polyperc is a space for creating and transforming rhythmic patterns. 
-                Come in and explore! Here you can get your ideas out faster than ever before.</p>
-                <button id="start">Get started!</button>
-            </div>
+            <form class="authentication">
+                <h2>SIGN IN</h2>
+                <div class="auth-inputs">
+                  <input id="username" placeholder="username"/>
+                  <label for="username" style="color: red">username is taken</label>
+                  <input id="password" type="password" placeholder="password"/>
+                  <label for="password" style="color: red">password must contain a number</label>
+                </div>
+                <div class="auth-btns">
+                  <button class="credential-btn" id="log-in">Log In</button>
+                  <button class="credential-btn" id="sign-up">Sign Up</button>
+                  <button class="credential-btn" id="demo">Just Demo</button>
+                </div>
+                <p class="requirement">Usernames must be between 2 and 17 characters.</p>
+                <p class="requirement">Passwords must be between 10 and 17 characters. <span style="color:red;">Passwords must contain a capital letter</span>, a lower case letter, at least one number, and at least one symbol.</p>
+            </form>
         </section>
         <div class="hero">Hero</div>
     </main>
