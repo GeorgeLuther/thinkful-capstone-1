@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>    
+    <title>Polyperc</title>
+    <meta name="Description" content="A web app for creating and manipulating rhythmic patterns.">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6cb83674ce.js" crossorigin="anonymous"></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <section class="title">
+            <button class="dash-btn" id="new">+</button>
+            <h1>POLYPERC</h1>
+            <button class="dash-btn" id="hamburger"><i class="fas fa-bars fa-2x"></i></button>
+        </section>
+        <section class="dashboard">
+            <div class="filters">
+              <button class="dash-btn" id="search-patterns"><i class="fas fa-search fa-lg"></i></button>
+              <button class="dash-btn" id="sort-patterns"><i class="fas fa-chevron-down fa-lg"></i></button>
+            </div>
+            <div class="global-transport">            
+              <button class="dash-btn" id="loop" style="font-weight: 800;">↺</button>
+              <button class="dash-btn" id="back">◁◁</button>
+              <button class="dash-btn" id="play">▷</button>
+              <button class="dash-btn" id="forth">▷▷</button>
+            </div>
+            <div class="global-tempo-volume">
+              <button class="dash-btn" id="global-volume"><i class="fas fa-volume-up fa-lg"></i></button>
+              <input class="dash-btn" size="7" placeholder="120 bpm" id="global-tempo" ></input>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="patterns-area">
+            <div class="pattern">
+              <div class="condensed">
+                <div class="pattern-main">
+                  <button class="delete-btn"  title="delete this pattern from the workspace">🗙</button>
+                  <button class="copy-btn"><i class="far fa-clone"></i></button>
+                  <input placeholder="pattern name" class="name-input">
+                  <button class="solo-btn" title="solo this pattern (mutes all unselected patterns)" style="font-weight: 1000;">S</button>
+                  <button class="volume-btn"><i class="fas fa-volume-up fa-lg"></i></button>
+                </div>
+                <div class="pattern-edit">
+                  <button class="expand-btn"><i class="fas fa-ellipsis-v"></i></button>
+                  <div class="sequencer">
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" active>
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" >
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" >
+                  </div>
+                  <button class="play-btn"><i class="fas fa-play"></i></button>    
+                </div>
+              </div>
+              <div class="expanded">
+                <select class="method-dropdown">
+                  <option>- technique -</option>
+                  <option>pulse</option>
+                  <option>beat</option>
+                  <option>random</option>
+                  <option>even</option>
+                  <option>periodic</option>
+                  <option>cyclic</option>
+                  <option>subdivision</option>
+                  <option>first</option>
+                  <option>last</option>
+                  <option disabled="">grab</option>
+                </select>
+                <select class="sound-dropdown">
+                  <option>- sound -</option>
+                  <option>kick</option>
+                  <option>snare</option>
+                  <option>hihat-closed</option>
+                  <option>hihat-open</option>
+                  <option>shaker</option>
+                  <option>clap</option>
+                  <option>crash</option>
+                  <option>ride</option>
+                </select>
+                <label class="cont"> 
+                  reverse<input type="checkbox" class="check">
+                </label>
+                <label class="cont">
+                  opposite<input type="checkbox" class="check">
+                </label>
+                <br></br>
+                <button class="decrement-bar-length-btn">-</button>
+                <input placeholder="bar length" size="9" class="bar-length-input">
+                <button class="increment-bar-length-btn">+</button>
+                <button class="decrement-onset-btn">-</button>
+                <input placeholder="onset(s)" size="6" class="onsets-input">
+                <button class="increment-onsets-btn">+</button>
+                <button class="decrement-rotation-btn">-</button>
+                <input placeholder="rotation" size="7" class="rotation-input">
+                <button class="increment-rotation-btn">+</button>
+                <input class="tempo-btn" size="7" placeholder="120 bpm" ></input>
+                <input class="multiplier-btn" size="8" placeholder="multiplier" ></input>
+              </div>
+            </div>
+        </section>
+    </main>
+  </body>
+</html>
