@@ -69,6 +69,7 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: flex-end;
     }
     #global-tempo {
         width: 70px;
@@ -79,6 +80,16 @@ html {
         flex-direction: column;
         align-items: center;
     }
+    table {
+        border-collapse: collapse;
+    }
+    td {
+        border: 1px solid lightgray;
+        padding: 8px;
+    }
+    tr:nth-child(odd) {
+        background-color: #eeeeee;
+      }
     h2 {
         font-size: 38px;
     }
@@ -115,7 +126,6 @@ html {
         margin-bottom: 80px;
     }
     .credential-btn {
-        width: 200px;
         font-size: 20px;
         margin: 8px;
         padding: 8px;
@@ -136,7 +146,7 @@ html {
         padding: 8px;
         margin-top: 16px;
     }
-    .pattern-edit, .pattern-main {
+    .pattern-editor, .pattern-main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
