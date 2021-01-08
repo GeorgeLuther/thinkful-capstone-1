@@ -10,7 +10,7 @@ html {
     font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
 }
   header, body {
-      width: 100vw;
+      
       padding: 0;
       margin: 0;
   }
@@ -31,6 +31,9 @@ html {
         padding: 0 10px 0 10px;
         background-color: grey;
         border: none;
+    }
+    #new:hover, #hamburger:hover {
+        color: white;
     }
     #hamburger {
         padding-bottom: 4px;
@@ -55,10 +58,20 @@ html {
     .global-transport button { 
         font-size: 30px;
     }
+    #play {
+        font-size: 32px;
+        margin-top: 2px;
+    }
+    #loop:hover, #back:hover, #play:hover, #forth:hover, #global-volume:hover, #search-patterns:hover, #sort-patterns:hover {
+        color: gray;
+    }
     .filters, .global-tempo-volume {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    #global-tempo {
+        width: 70px;
     }
 /* MAIN */
     section, main {
@@ -115,6 +128,9 @@ html {
     .patterns-area {
         display: grid;
     }
+    .selected {
+     border: solid black 2px;   
+    }
     .pattern {
         background-color: rgb(235, 235, 235);
         padding: 8px;
@@ -140,21 +156,6 @@ html {
     .pattern button:hover, .name-input:hover {
         border: solid grey 1px;
         border-radius: 4px;
-    }
-    .expanded {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .expanded div{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 10px;
-    }
-    .expanded button {
-        width: 22px;
-        height: 22px;
     }
     .sequencer {
         background-color: lightgray;
@@ -190,6 +191,24 @@ html {
     }
     .beat:hover {
         background-color: white;
+    }
+    .expanded {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .expanded div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    .expanded button {
+        width: 22px;
+        height: 22px;
+    }
+    #reverse, #opposite {
+        border-radius: 20px;
     }
    
     @media all and (min-width:600px) {

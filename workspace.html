@@ -22,10 +22,10 @@
               <button class="dash-btn" id="sort-patterns"><i class="fas fa-chevron-down fa-lg"></i></button>
             </div>
             <div class="global-transport">            
-              <button class="dash-btn" id="loop" style="font-weight: 800;">↺</button>
-              <button class="dash-btn" id="back">◁◁</button>
-              <button class="dash-btn" id="play">▷</button>
-              <button class="dash-btn" id="forth">▷▷</button>
+              <button class="dash-btn" id="loop"><i class="fas fa-sync-alt"></i></button>
+              <button class="dash-btn" id="back"><i class="fas fa-backward fa-lg"></i></button>
+              <button class="dash-btn" id="play"><i class="fas fa-play"></i></button>
+              <button class="dash-btn" id="forth"><i class="fas fa-forward fa-lg"></i></button>
             </div>
             <div class="global-tempo-volume">
               <button class="dash-btn" id="global-volume"><i class="fas fa-volume-up fa-lg"></i></button>
@@ -85,11 +85,11 @@
                     <option>crash</option>
                     <option>ride</option>
                   </select>
-                  <label class="cont"> 
-                    reverse<input type="checkbox" class="check">
+                  <label for="reverse"> 
+                    reverse<input id="reverse" type="checkbox" class="check">
                   </label>
-                  <label class="cont">
-                    opposite<input type="checkbox" class="check">
+                  <label for="opposite">
+                    opposite<input id="opposite" type="checkbox" class="check">
                   </label>
                 </div>
                 <div>
@@ -108,10 +108,65 @@
                     <input placeholder="rotation" size="7" class="rotation-input">
                     <button class="increment-rotation-btn">+</button>
                   </div>
-                  <input class="tempo-btn" size="7" placeholder="120 bpm" ></input>
+                  <div>
+                    <button class="decrement-tempo-btn">-</button>
+                    <input class="tempo-btn" size="7" placeholder="120 bpm"></input>
+                    <button class="increment-tempo-btn">+</button>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <div class="pattern">
+              <div class="condensed">
+                <div class="pattern-main">
+                  <button class="delete-btn" title="delete this pattern from the workspace"><i class="fas fa-times fa-lg"></i></button>
+                  <button class="copy-btn"><i class="far fa-copy fa-lg"></i></button>
+                  <input placeholder="pattern name" class="name-input" value="four on the floor">
+                  <button class="solo-btn" title="solo this pattern (mutes all unselected patterns)" style="font-weight: 1000;">S</button>
+                  <button class="volume-btn"><i class="fas fa-volume-up fa-lg"></i></button>
+                </div>
+                <div class="pattern-edit">
+                  <button class="expand-btn"><i class="fas fa-ellipsis-v"></i></button>
+                  <div class="sequencer">
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" >
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" >
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" >
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" >
+                  </div>
+                  <button class="play-btn"><i class="fas fa-play"></i></button>    
+                </div>
+              </div>
+            </div>
+
+            <div class="pattern">
+              <div class="condensed">
+                <div class="pattern-main">
+                  <button class="delete-btn" title="delete this pattern from the workspace"><i class="fas fa-times fa-lg"></i></button>
+                  <button class="copy-btn"><i class="far fa-copy fa-lg"></i></button>
+                  <input placeholder="pattern name" class="name-input" value="funky offbeats">
+                  <button class="solo-btn" title="solo this pattern (mutes all unselected patterns)" style="font-weight: 1000;">S</button>
+                  <button class="volume-btn"><i class="fas fa-volume-up fa-lg"></i></button>
+                </div>
+                <div class="pattern-edit">
+                  <button class="expand-btn"><i class="fas fa-ellipsis-v"></i></button>
+                  <div class="sequencer">
+                    <input type="checkbox" class="beat" >
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" >
+                    <input type="checkbox" class="beat" checked>
+                    <input type="checkbox" class="beat" >
+                  </div>
+                  <button class="play-btn"><i class="fas fa-play"></i></button>    
+                </div>
+              </div>
+            </div>
+
         </section>
     </main>
   </body>
